@@ -2,15 +2,7 @@ import Selector from './selector'
 
 const textNodeType = 3
 const getDefaultText = (input) => {
-  let defaultText = ''
-
-  const label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL)
-
-  if (label) {
-    defaultText = label.textContent
-  }
-
-  return defaultText
+  return input.placeholder || 'Choose file';
 }
 
 const findFirstChildNode = (element) => {

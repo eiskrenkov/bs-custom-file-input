@@ -19,14 +19,7 @@
   var textNodeType = 3;
 
   var getDefaultText = function getDefaultText(input) {
-    var defaultText = '';
-    var label = input.parentNode.querySelector(Selector.CUSTOMFILELABEL);
-
-    if (label) {
-      defaultText = label.textContent;
-    }
-
-    return defaultText;
+    return input.placeholder || 'Choose file';
   };
 
   var findFirstChildNode = function findFirstChildNode(element) {
